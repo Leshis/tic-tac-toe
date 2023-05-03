@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.board{
+    display: grid;
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5em;
+    background-color: rgb(33, 36, 36);
+}
+
+.square{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.square:hover{
+    background-color: rgb(238, 238, 238);
+}
