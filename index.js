@@ -24,5 +24,27 @@ const gameBoard = (() => {
     };
 });
 
+const Player = (name, symbol) => {
+    const getName = () => name;
+    const getSymbol = () => symbol;
+    return { getName, getSymbol };
+};
+
+const player1 = Player('Player 1', 'X');
+const player2 = Player('Player 2', 'O');
 const myGameBoard = gameBoard();
-myGameBoard.displaySelection(0, 'X');
+let currentPlayer = player1;
+
+gameBoardElement.addEventListener('click', (e) => {
+    const square = e.target;
+    const squareIndex = Number(square.dataset.index);
+    if (square.innerText === '') {
+        myGameBoard.displaySelection(squareIndex, currentPlayer.getSymbol());
+        currentPlayer = currentPlayer === player1 ? player2 : player1;
+    }
+});
+
+resetButton.addEventListener('click', () => {
+    myGameBoard.resetBoard();
+    currentPlayer = player1;
+});
