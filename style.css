@@ -61,3 +61,10 @@ h1{
 .reset:hover{
     background-color: #444;
 }
+
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
