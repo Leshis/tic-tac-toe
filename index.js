@@ -1,5 +1,6 @@
 const gameBoardElement = document.getElementById('board');
 const resetButton = document.getElementById('reset-button');
+const textElement = document.getElementById('text');
 
 const gameBoard = (() => {
     let gameBoardArray = new Array(9).fill('');
@@ -68,7 +69,7 @@ gameBoardElement.addEventListener('click', (e) => {
     if (square.innerText === '') {
         myGameBoard.displaySelection(squareIndex, currentPlayer.getSymbol());
         if (isGameWon(myGameBoard.getBoardArray())) {
-            console.log(`${currentPlayer.getName()} has won the game!`);
+            textElement.innerText = `${currentPlayer.getName()} has won the game!`;
             myGameBoard.resetBoard();
             currentPlayer = player1;
         } else {

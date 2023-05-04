@@ -24,10 +24,40 @@ h1{
 .square{
     border: none;
     background-color: white;
+    font-size: x-large;
     cursor: pointer;
     transition: 0.15s;
 }
 
 .square:hover{
     background-color: rgb(238, 238, 238);
+}
+
+.text{
+    text-align: center;
+    margin: 2em;
+}
+
+.reset-container{
+    width: 200px;
+    margin: 0 auto;
+}
+
+.reset{
+   background-color: #333;
+   text-align: center;
+   width: 100%;
+   color: #fff;
+   padding: 8px 16px;
+   border-radius: 4px;
+   font-size: 1rem;
+   font-weight: bold;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: background-color 0.2s ease-in-out;
+}
+
+.reset:hover{
+    background-color: #444;
 }
